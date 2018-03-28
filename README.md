@@ -22,7 +22,7 @@ Customize extension with vscode settings.
 
 ## References
 
-Icon made by [Icon Monk](https://www.flaticon.com/authors/icon-monk) from [www.flaticon.com](www.flaticon.com)
+Icon made by [Icon Monk](https://www.flaticon.com/authors/icon-monk) from [www.flaticon.com](https://www.flaticon.com/)
 
 ## License
 

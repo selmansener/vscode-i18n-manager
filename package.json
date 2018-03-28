@@ -4,6 +4,10 @@
     "description": "Generates i18n files in component folder with one click.",
     "version": "1.0.0",
     "publisher": "oplog-selman-sener",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/selmansener/vscode-i18n-manager"
+    },
     "engines": {
         "vscode": "^1.19.0"
     },
