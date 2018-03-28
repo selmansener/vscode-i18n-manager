@@ -1,0 +1,85 @@
+{
+    "name": "vscode-i18n-manager",
+    "displayName": "Visual Studio Code i18n Manager Extension",
+    "description": "Generates i18n files in component folder with one click.",
+    "version": "1.0.0",
+    "publisher": "oplog-selman-sener",
+    "engines": {
+        "vscode": "^1.19.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "*"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.generateI18n",
+                "title": "Generate i18n"
+            },
+            {
+                "command": "extension.compileI18n",
+                "title": "Compile i18n Files"
+            }
+        ],
+        "menus": {
+            "explorer/context": [
+                {
+                    "when": "",
+                    "command": "extension.generateI18n",
+                    "group": "i18n"
+                }
+            ]
+        },
+        "configuration": [
+            {
+                "title": "i18n-manager",
+                "properties": {
+                    "i18nManager.locales": {
+                        "type": "array",
+                        "default": [
+                            "en-GB",
+                            "pl-PL"
+                        ],
+                        "description": "Describes the target locales which will be generated."
+                    },
+                    "i18nManager.compilerTargetPath": {
+                        "type": "string",
+                        "default": "src/assets/i18n/",
+                        "description": "Describes the target path to i18n compile files."
+                    },
+                    "i18nManager.translationFileSuffix": {
+                        "type": "string",
+                        "default": "translation",
+                        "description": "Describes the suffix of translation files."
+                    }
+                }
+            }
+        ]
+    },
+    "icon": "images/translation.png",
+    "galleryBanner": {
+        "color": "#ffffff",
+        "theme": "light"
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "@types/lodash": "^4.14.97",
+        "@types/mocha": "^2.2.42",
+        "@types/node": "^7.0.43",
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6"
+    },
+    "dependencies": {
+        "lodash": "^4.17.4"
+    }
+}
