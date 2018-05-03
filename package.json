@@ -2,8 +2,8 @@
     "name": "vscode-i18n-manager",
     "displayName": "Visual Studio Code i18n Manager Extension",
     "description": "Generates i18n files in component folder with one click.",
-    "version": "1.0.0",
-    "publisher": "oplog-selman-sener",
+    "version": "1.0.1",
+    "publisher": "selman-sener-oplog",
     "repository": {
         "type": "git",
         "url": "https://github.com/selmansener/vscode-i18n-manager"
