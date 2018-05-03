@@ -18,6 +18,10 @@ export class Compiler {
     compile() {
         vscode.window.showInformationMessage("Compiling translations...");
 
+        if (!fs.existsSync(this.targetPath)) {
+            fs.mkdirSync(this.targetPath);
+        }
+        
         for (let i in this.locales) {
             let locale = this.locales[i];
             this.translations[locale] = {};
